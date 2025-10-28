@@ -1,9 +1,9 @@
-import React from 'react';
+import { usestate } from 'react';
 
 export const App: React.FC = () => (
-  {const [key, setkey = React.useState;}
+  const [key, setKey] = useState<string>('');
 
-  <div className="App">
-    <p className="App__message">The last pressed key is [Enter]</p>
+  <div className="App"> 
+    <p className="App__message">The last pressed key is {Key}</p>
   </div>
 );
