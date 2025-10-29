@@ -1,9 +1,10 @@
-import { usestate } from 'react';
+import React, { useState } from 'react';
 
-export const App: React.FC = () => (
+export const App: React.FC = () => {
   const [key, setKey] = useState<string>('');
-
-  <div className="App"> 
-    <p className="App__message">The last pressed key is {Key}</p>
-  </div>
-);
+  return React.createElement(
+    'div',
+    { className: 'App' },
+    React.createElement('p', { className: 'App__message' }, 'The last pressed key is ', key)
+  );
+}
